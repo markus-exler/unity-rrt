@@ -17,10 +17,10 @@ The RRT* based algorithms continue after finding a path and always run until rea
 1. [RRT Basic](#rrt-basic)
 2. [RRT Informed](#rrt-informed)
 3. [RRT Informed With Reduction](#rrt-informed-with-reduction)
-4. [RRT*](#rrt*)
-5. [RRT* Informed](#rrt*-informed)
+4. [RRT*](#rrt)
+5. [RRT* Informed](#rrt-informed-1)
 6. [RRT* Informed Pruning](#rrt*-informed-pruning)
-7. [RRT* Informed Pruning Ellipse (CKA Informed RRT*)](#RRT*-Informed-Pruning-Ellipse-(CKA-Informed-RRT*))
+7. [RRT* Informed Pruning Ellipse (CKA Informed RRT*)](#rrt-informed-pruning-ellipse-cka-informed-rrt)
 8. [RRT Informed Planar](#rrt-informed-planar)
 9. [RRT Informed Planar With Reducion](#rrt-informed-planar-with-reduction)
 
@@ -63,7 +63,7 @@ The tree is also restructured if neighbour nodes within the given radius are bet
 <img src="./Images/rrt_star.gif" width="320" height="279" /> 
 
 ### RRT* Informed
-This strategy is a combination of the [informed RRT](#RRT-informed) and the [RRT*](#rrt*). 
+This strategy is a combination of the [informed RRT](#RRT-informed) and the [RRT*](#rrt). 
 It works like the RRT* but it is biased towards the target until the first path is found. 
 For the following search for shorter paths the target bias is logically no longer needed, hence new nodes are added in a completely random manner.
 The target bias is editable in the inspector window.
@@ -71,7 +71,7 @@ The target bias is editable in the inspector window.
 <img src="./Images/rrt_star_informed.gif" width="320" height="279" /> 
 
 ### RRT* Informed Pruning
-Implementation of an adapted [informed RRT*](#rrt*-informed), in this strategy the tree is pruned every time a new shorter path is found. 
+Implementation of an adapted [informed RRT*](#rrt-informed-1), in this strategy the tree is pruned every time a new shorter path is found. 
 So if a shorter path than the current one is found, every node and its children are removed, where the combined distance to the end and start position is higher than the currently shortest found path.
 These nodes are removed because they logically couldn't be part of a shorter path when the direct line to and from the node is already longer than the current shortest path.
 
